@@ -3,8 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 var app = express();
-
-
+var port = process.env.PORT || 3000;
 
 // app.use((req, res, next) => {
 //   var now = new Date().toString();
@@ -63,6 +62,6 @@ app.get('/bad', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("The server has started on port 3000!");
+app.listen(port, () => {
+  console.log(`The server has started on port ${port}!`);
 });
